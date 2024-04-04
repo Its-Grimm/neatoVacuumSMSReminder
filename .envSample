@@ -1,0 +1,10 @@
+# Rename to .env and replace the values of:
+# SENDER_EMAIL     = email@address.com
+# RECEIVER_NUMBERS = ReceiverPhoneNumber@msg.ProviderExtension.com
+# APP_KEY          = abcd efgh ijkl mnop
+
+SENDER_EMAIL = 'YourEmailHere'       
+RECEIVER_NUMBER1 = 'YourFirstReceiverNumberHere'
+RECEIVER_NUMBER2 = 'YourSecondReceiverNumberHere'
+...              = ...
+APP_KEY = 'YourGoogleAppKeyHere'                                
