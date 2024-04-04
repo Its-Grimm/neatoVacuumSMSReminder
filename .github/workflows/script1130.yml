@@ -10,7 +10,7 @@ on:
     - cron: '30 11 * * 6'
 jobs:
   runScript:
-    runsOn: ubuntu-latest 
+    runs-on: ubuntu-latest 
 
     steps:
       - name: Checkout Repository
