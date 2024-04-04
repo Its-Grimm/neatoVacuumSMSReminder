@@ -1,0 +1,28 @@
+name: Neato Reminder Script (11:45am)
+
+on: 
+  schedule:
+    # Runs at 11:45am PST(Vancouver) every Saturday: 
+    # 45 min past the 11th hour on the 6th day of the week (0-6: Sunday = 0, Saturday = 6)
+    - cron: '45 11 * * 6'
+jobs:
+  runScript:
+    runsOn: ubuntu-latest 
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+
+      - name: Run Script
+        env: 
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          RECEIVER_NUMBER1: ${{ secrets.RECEIVER_NUMBER1 }}
+          RECEIVER_NUMBER2: ${{ secrets.RECEIVER_NUMBER2 }}
+          APP_KEY: ${{ secrets.APP_KEY }}
+        run: python reminder.py
