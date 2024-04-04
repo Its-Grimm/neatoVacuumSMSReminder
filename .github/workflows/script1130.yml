@@ -10,7 +10,6 @@ jobs:
     runsOn: ubuntu-latest 
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v2
 
@@ -21,8 +20,8 @@ jobs:
 
       - name: Run Script
         env: 
-          ${{ secrets.SENDER_EMAIL }}
-          ${{ secrets.RECEIVER_NUMBER1 }}
-          ${{ secrets.RECEIVER_NUMBER2 }}
-          ${{ secrets.APP_KEY }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          RECEIVER_NUMBER1: ${{ secrets.RECEIVER_NUMBER1 }}
+          RECEIVER_NUMBER2: ${{ secrets.RECEIVER_NUMBER2 }}
+          APP_KEY: ${{ secrets.APP_KEY }}
         run: python reminder.py

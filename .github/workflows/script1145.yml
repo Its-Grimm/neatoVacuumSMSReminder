@@ -18,7 +18,6 @@ jobs:
         with:
           python-version: '3.x'
 
-
       - name: Run Script
         env: 
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
