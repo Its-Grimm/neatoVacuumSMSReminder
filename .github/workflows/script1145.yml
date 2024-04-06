@@ -7,7 +7,7 @@ on:
   schedule:
     # Runs at 11:45am PST(Vancouver) every Saturday: 
     # 45 min past the 11th hour on the 6th day of the week (0-6: Sunday = 0, Saturday = 6)
-    - cron: '45 11 * * 6'
+    - cron: '45 18 * * 6'
 jobs:
   runScript:
     runs-on: ubuntu-latest
